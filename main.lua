@@ -7,12 +7,15 @@ function love.load()
   font:setFilter("nearest","nearest")
   love.graphics.setFont(font)
   
-  
+  source = love.audio.newSource("assets/conga.ogg", "stream")
   
 end
 
 function love.update()
   
+  if not source:isPlaying( ) then
+		love.audio.play( source )
+	end
   
   
 end
